@@ -1,6 +1,16 @@
 def sum_len(path):
-    # returns the sum of the length of all names in the file
+    """
+    Reads all names from a file and calculates the total sum of the lengths of all names.
+
+    Param:
+    path (str): The file path from which to read the names.
+
+    Returns:
+    int: The total sum of the lengths of all names in the file.
+    """
+    # Open the file, read its contents, and split into lines to get individual names
     names = open(path, "r").read().splitlines()
+    # Calculate and return the sum of the lengths of all names using a generator expression
     return sum(len(name) for name in names)
 
 

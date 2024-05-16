@@ -1,7 +1,18 @@
 def specific_size(path):
-    # returns all the names in the file that have a specific size
+    """
+    Reads all names from a file, filters, and returns those that match a specific length entered by the user.
+
+    Param:
+    path (str): The file path from which to read the names.
+
+    Returns:
+    str: A string containing all names from the file that have the specified length, each name on a new line.
+    """
+    # Prompt the user to enter the desired size of the names and convert the input to an integer
     size = int(input("Enter the size: "))
+    # Open the file, read its contents, and split into lines to get individual names
     names = open(path, "r").read().splitlines()
+    # Filter the names to only include those that match the specified size and join them with newlines
     return '\n'.join([name for name in names if len(name) == size])
 
 
