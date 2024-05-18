@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Chapter3/SummaryExercize3.4/Exceptions"
+    ]
+}
