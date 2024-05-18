@@ -31,10 +31,7 @@ class Animal():
         self._hunger -= 1
 
     def talk(self):
-        """
-        Returns the sound the animal makes.
-        """
-        return "Animal sound"
+        pass
 
 def main():
     from Cat import Cat

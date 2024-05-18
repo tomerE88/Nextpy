@@ -9,9 +9,8 @@ def longest_name(path):
     str: The longest name found in the file.
     """
     # Read all names from the file and store them as a list of strings
-    names = open(path, "r").read().splitlines()
     # Return the name with the maximum length from the list of names
-    return max(names, key=len)
+    return max(names = open(path, "r").read().splitlines(), key=len)
 
 
 def main():
