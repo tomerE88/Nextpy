@@ -11,29 +11,16 @@ import sys
 # sys.path.insert(0, exceptions_folder)
 # sys.path.insert(0, password_exceptions_folder)
 # sys.path.insert(0, username_exceptions_folder)
-# from UsernameTooLong import UsernameTooLong
-# from UsernameTooShort import UsernameTooShort
-# from UsernameContainsIllegalCharacter import UsernameContainsIllegalCharacter
-# from PasswordTooShort import PasswordTooShort
-# from PasswordTooLong import PasswordTooLong
-# from PasswordMissingCharacter import PasswordMissingCharacter
-# from ExceptionsForPasswordMissing.MissingLowercase import MissingLowercase
-# from ExceptionsForPasswordMissing.MissingUppercase import MissingUppercase
-# from ExceptionsForPasswordMissing.MissingDigit import MissingDigit
-# from ExceptionsForPasswordMissing.MissingSpecial import MissingSpecial
-
-from Exceptions.PasswordExceptions.PasswordTooShort import PasswordTooShort
-from Exceptions.PasswordExceptions.PasswordTooLong import PasswordTooLong
-from Exceptions.PasswordExceptions.ExceptionsForPasswordMissing import PasswordMissingCharacter
-from Exceptions.PasswordExceptions.ExceptionsForPasswordMissing import MissingLowercase
-from Exceptions.PasswordExceptions.ExceptionsForPasswordMissing import MissingUppercase
-from Exceptions.PasswordExceptions.ExceptionsForPasswordMissing import MissingDigit
-from Exceptions.PasswordExceptions.ExceptionsForPasswordMissing import MissingSpecial
-
-
-from Exceptions.UsernameExceptions.UsernameTooShort import UsernameTooShort
-from Exceptions.UsernameExceptions.UsernameTooLong import UsernameTooLong
-from Exceptions.UsernameExceptions.UsernameContainsIllegalCharacter import UsernameContainsIllegalCharacter
+from UsernameTooLong import UsernameTooLong
+from UsernameTooShort import UsernameTooShort
+from UsernameContainsIllegalCharacter import UsernameContainsIllegalCharacter
+from PasswordTooShort import PasswordTooShort
+from PasswordTooLong import PasswordTooLong
+from PasswordMissingCharacter import PasswordMissingCharacter
+from ExceptionsForPasswordMissing.MissingLowercase import MissingLowercase
+from ExceptionsForPasswordMissing.MissingUppercase import MissingUppercase
+from ExceptionsForPasswordMissing.MissingDigit import MissingDigit
+from ExceptionsForPasswordMissing.MissingSpecial import MissingSpecial
 
 
 
@@ -125,18 +112,18 @@ def at_least_one_special_character(password):
 
 
 def main():
-    # check_input("tomer", "Hello!123password") # Username and password are valid
-    # check_input("to&mer", "Hello!123password") # "Username contains wrong character"
-    # check_input("tr", "Hello!123password") # Username too short
-    # check_input("tofdfdfdfdfdfdfdmer", "Hello!123password") # Username too long
-    # check_input("tomer", "H!!o1") # Password too short
-    # # password too long
-    # check_input("tomer", "Hellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo123!")
+    check_input("tomer", "Hello!123password") # Username and password are valid
+    check_input("to&mer", "Hello!123password") # "Username contains wrong character"
+    check_input("tr", "Hello!123password") # Username too short
+    check_input("tofdfdfdfdfdfdfdmer", "Hello!123password") # Username too long
+    check_input("tomer", "H!!o1") # Password too short
+    # password too long
+    check_input("tomer", "Hellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo123!")
     # password missing character
-    # check_input("tomer", "hellooooooo123@#") # Password dont have uppercase
+    check_input("tomer", "hellooooooo123@#") # Password dont have uppercase
     check_input("tomer", "HELLOOOOOOO123@#") # Password dont have lowercase
-    # check_input("tomer", "Helloooooooooo@#") # Password dont have digit
-    # check_input("tomer", "Helloooooooooo123") # Password dont have special character
+    check_input("tomer", "Helloooooooooo@#") # Password dont have digit
+    check_input("tomer", "Helloooooooooo123") # Password dont have special character
 
 
 if __name__ == "__main__":
