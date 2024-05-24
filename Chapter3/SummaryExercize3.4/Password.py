@@ -1,16 +1,5 @@
 import sys
-# import os
 
-# # Get the path of the exceptions folder
-# current_directory = os.path.dirname(os.path.abspath(__file__))
-# exceptions_folder = os.path.join(current_directory, 'Exceptions')
-# password_exceptions_folder = os.path.join(exceptions_folder, 'PasswordExceptions')
-# username_exceptions_folder = os.path.join(exceptions_folder, 'UsernameExceptions')
-
-# # Add the folders to sys.path
-# sys.path.insert(0, exceptions_folder)
-# sys.path.insert(0, password_exceptions_folder)
-# sys.path.insert(0, username_exceptions_folder)
 from UsernameTooLong import UsernameTooLong
 from UsernameTooShort import UsernameTooShort
 from UsernameContainsIllegalCharacter import UsernameContainsIllegalCharacter
