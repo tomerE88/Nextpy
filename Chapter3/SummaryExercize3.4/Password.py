@@ -25,8 +25,6 @@ def check_input(username, password):
         
     except (UsernameContainsIllegalCharacter, UsernameTooShort, UsernameTooLong) as e:
         print(f"Username Error: {e}")
-    # except (PasswordMissingCharacter, PasswordTooShort, PasswordTooLong) as e:
-    #     print(f"Password Error: {e}")
     except (PasswordMissingCharacter, PasswordTooShort, PasswordTooLong) as e:
         print(f"Password Error: {e}")
     else:
