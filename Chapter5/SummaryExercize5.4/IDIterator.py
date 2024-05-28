@@ -16,6 +16,7 @@ class IDIterator:
         """
         Multiply the digits of a number by 2 if the index is even and by 1 if the index is odd
         :param num: int (id)
+        return list of int
         """
         num_str = str(num)
         result = []
@@ -38,6 +39,7 @@ class IDIterator:
         """
         Check if the id is valid
         :param id_number: int
+        return bool (True if the id is valid, False otherwise)
         """
         # check if the id is valid - the sum of the digits of the new id is divisible by 10
         return sum(IDIterator.new_id(id_number)) % 10 == 0
@@ -62,6 +64,7 @@ def id_generator(id):
     """
     Generate a valid id
     :param id: int
+    return generator
     """
     while True:
         if id == 999999999:
